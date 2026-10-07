@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to L'Ambroisie Cafe & Restaurant - Experience premium culinary art, modern glassmorphic aesthetics, and warm hospitality in the heart of the city.">
+    <title>L'Ambroisie | Premium Café & Restaurant</title>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Preloader (Loading Screen) -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="loader-coffee"></div>
+            <h4 class="display-font text-gold">HAVELI RESTAURANT</h4>
+            <p class="text-muted small">Crafting culinary perfection...</p>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="display-font text-brown fs-2 fw-bold tracking-wide">HAVELI RESTAURANT</span>
+            </a>
+            
+            <div class="d-flex align-items-center order-lg-last gap-3">
+                <!-- Theme Toggle -->
+                <button class="btn-theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <!-- Book Table CTA -->
+                <button class="btn btn-gold d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                    Reserve Table
+                </button>
+                
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars fs-3"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image Slider Section -->
+    <section class="hero-slider-section">
+        <!-- Slide 1 -->
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80');"></div>
+        <!-- Slide 2 -->
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80');"></div>
+        <!-- Slide 3 -->
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80');"></div>
+
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content-container">
+            <div class="container text-center text-sm-start">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <span class="hero-subtitle">Where Culinary Art Meets Passion</span>
+                        <h1 class="hero-title">Experience Premium Dining</h1>
+                        <p class="hero-desc">Indulge in a curated journey of tastes crafted by world-class chefs, set within an atmosphere designed to inspire and delight your senses.</p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-start gap-3">
+                            <a href="menu.html" class="btn btn-gold text-center">View Menu</a>
+                            <a href="contact.html" class="btn btn-gold text-center">Reserve Table</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome & Statistics Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal-on-scroll">
+                    <span class="section-subtitle">Since 2012</span>
+                    <h2 class="section-title text-start mb-4">A Legacy of Elegant Flavors</h2>
+                    <p class="mb-4">At Haveli, we believe dining is more than just food; it is an unforgettable experience. We curate each dish using organic, locally-sourced ingredients, fusing traditional culinary foundations with modern gastronomy.</p>
+                    <p class="mb-5 text-muted">From roasting our single-origin coffee beans in-house to plating our signature truffle-infused entrees, every step is executed with precision, devotion, and pride.</p>
+                    <a href="about.html" class="btn btn-outline-gold">Our Complete Story</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-sm-6 reveal-on-scroll">
+                            <div class="stats-counter-card glass-card">
+                                <div class="stats-number" data-target="15000">0</div>
+                                <div class="stats-label">Happy Customers</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 reveal-on-scroll">
+                            <div class="stats-counter-card glass-card">
+                                <div class="stats-number" data-target="42000">0</div>
+                                <div class="stats-label">Orders Placed</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 reveal-on-scroll">
+                            <div class="stats-counter-card glass-card">
+                                <div class="stats-number" data-target="14">0</div>
+                                <div class="stats-label">Years of Craft</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 reveal-on-scroll">
+                            <div class="stats-counter-card glass-card">
+                                <div class="stats-number" data-target="8">0</div>
+                                <div class="stats-label">Culinary Awards</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Today's Special & Offers Section -->
+    <section class="section-padding bg-light-gray" style="background-color: var(--color-light-gray); transition: background-color 0.5s ease;">
+        <div class="container">
+            <div class="section-title-wrap text-center reveal-on-scroll">
+                <span class="section-subtitle">Specials & Offers</span>
+                <h2 class="section-title">Today's Gourmet Promotions</h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Promo 1 -->
+                <div class="col-lg-5 reveal-on-scroll">
+                    <div class="glass-card p-4 d-flex flex-column h-100 position-relative overflow-hidden">
+                        <div class="badge bg-danger position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">20% OFF</div>
+                        <h4 class="text-gold display-font mb-2">Morning Espresso & Pastry</h4>
+                        <p class="text-muted">Start your morning right. Get a freshly baked almond croissant and a cup of our signature single-origin espresso at 20% off.</p>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold fs-5 text-gold">&#8377;550 <del class="text-muted fs-6 font-normal">&#8377;800</del></span>
+                            <span class="text-muted small"><i class="far fa-clock me-1"></i> 7:00 AM - 11:00 AM Daily</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Promo 2 -->
+                <div class="col-lg-5 reveal-on-scroll">
+                    <div class="glass-card p-4 d-flex flex-column h-100 position-relative overflow-hidden">
+                        <div class="badge bg-danger position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Chef's Treat</div>
+                        <h4 class="text-gold display-font mb-2">Three-Course Dinner Special</h4>
+                        <p class="text-muted">Indulge in a curated three-course fine dining menu featuring a house appetizer, signature ribeye main, and a decadent dessert.</p>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <span class="fw-bold fs-5 text-gold">&#8377;3500 <del class="text-muted fs-6 font-normal">&#8377;4500</del></span>
+                            <span class="text-muted small"><i class="far fa-clock me-1"></i> 5:00 PM - 10:00 PM Wed-Sun</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Food Categories -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title-wrap text-center reveal-on-scroll">
+                <span class="section-subtitle">Explore Our Menu</span>
+                <h2 class="section-title">Popular Food Categories</h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Category 1 -->
+                <div class="col-6 col-md-4 col-lg-2 reveal-on-scroll">
+                    <a href="menu.html?filter=breakfast" class="glass-card p-4 text-center d-block h-100">
+                        <div class="mb-3 text-gold"><i class="fas fa-egg fa-2x"></i></div>
+                        <h5 class="fs-6 mb-0">Breakfast</h5>
+                    </a>
+                </div>
+                <!-- Category 2 -->
+                <div class="col-6 col-md-4 col-lg-2 reveal-on-scroll">
+                    <a href="menu.html?filter=lunch" class="glass-card p-4 text-center d-block h-100">
+                        <div class="mb-3 text-gold"><i class="fas fa-utensils fa-2x"></i></div>
+                        <h5 class="fs-6 mb-0">Mains</h5>
+                    </a>
+                </div>
+                <!-- Category 3 -->
+                <div class="col-6 col-md-4 col-lg-2 reveal-on-scroll">
+                    <a href="menu.html?filter=pizza" class="glass-card p-4 text-center d-block h-100">
+                        <div class="mb-3 text-gold"><i class="fas fa-pizza-slice fa-2x"></i></div>
+                        <h5 class="fs-6 mb-0">Pizzas</h5>
+                    </a>
+                </div>
+                <!-- Category 4 -->
+                <div class="col-6 col-md-4 col-lg-2 reveal-on-scroll">
+                    <a href="menu.html?filter=desserts" class="glass-card p-4 text-center d-block h-100">
+                        <div class="mb-3 text-gold"><i class="fas fa-ice-cream fa-2x"></i></div>
+                        <h5 class="fs-6 mb-0">Desserts</h5>
+                    </a>
+                </div>
+                <!-- Category 5 -->
+                <div class="col-6 col-md-4 col-lg-2 reveal-on-scroll">
+                    <a href="menu.html?filter=coffee" class="glass-card p-4 text-center d-block h-100">
+                        <div class="mb-3 text-gold"><i class="fas fa-coffee fa-2x"></i></div>
+                        <h5 class="fs-6 mb-0">Coffees</h5>
+                    </a>
+                </div>
+                <!-- Category 6 -->
+                <div class="col-6 col-md-4 col-lg-2 reveal-on-scroll">
+                    <a href="menu.html?filter=beverages" class="glass-card p-4 text-center d-block h-100">
+                        <div class="mb-3 text-gold"><i class="fas fa-glass-martini-alt fa-2x"></i></div>
+                        <h5 class="fs-6 mb-0">Beverages</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef's Special (Signature Showcase) -->
+    <section class="section-padding bg-light-gray" style="background-color: var(--color-light-gray); transition: background-color 0.5s ease;">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal-on-scroll">
+                    <div class="position-relative overflow-hidden rounded-4" style="height: 450px;">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Signature dish" class="w-100 h-100 object-fit-cover">
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal-on-scroll">
+                    <span class="section-subtitle">Chef's Signature SpeciaL</span>
+                    <h2 class="section-title text-start mb-4">Dry-Aged Tomahawk Steak</h2>
+                    <p class="lead text-gold font-secondary italic mb-4">Dry-aged for 45 days, seared over premium oakwood charcoal, infused with rosemary garlic butter.</p>
+                    <p class="mb-4">Our Master Chef curates this exceptional cut from choice Black Angus cattle. Each steak is dry-aged inside our temperature-controlled aging chambers, enhancing tenderness and developing complex flavors before hitting the open flame grill.</p>
+                    <div class="d-flex align-items-center gap-4 mb-5">
+                        <span class="display-font fs-2 text-gold">&#8377;5500.00</span>
+                        <div class="text-gold fs-6">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-muted small ms-1">(120+ Reviews)</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#reservationModal">Pre-order for Tonight</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dishes Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title-wrap text-center reveal-on-scroll">
+                <span class="section-subtitle">Signature Selection</span>
+                <h2 class="section-title">Featured Culinary Dishes</h2>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Dish 1 -->
+                <div class="col-md-6 col-lg-4 reveal-on-scroll">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Signature</span>
+                            <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=800&q=80" alt="Creamy Truffle Pasta" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Penne Arrabbiata</h4>
+                            <p class="text-muted dish-desc">Handmade egg pasta tossed in aged parmigiano cream, infused with authentic fresh white truffles from Umbria.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;3400.00</span>
+                                <a href="menu.html" class="btn btn-outline-gold btn-sm py-2 px-3">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dish 2 -->
+                <div class="col-md-6 col-lg-4 reveal-on-scroll">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Gourmet</span>
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Gourmet Pizza" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Tandoori Paneer Pizza</h4>
+                            <p class="text-muted dish-desc">Sourdough crust, san marzano tomatoes, fresh creamy burrata ball, parma ham, organic extra virgin olive oil.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;1200.00</span>
+                                <a href="menu.html" class="btn btn-outline-gold btn-sm py-2 px-3">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dish 3 -->
+                <div class="col-md-6 col-lg-4 reveal-on-scroll">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag"></span>
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Specialty Espresso" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Vanilla Flat White</h4>
+                            <p class="text-muted dish-desc">Our single-origin organic Colombian coffee roast, extracted perfectly and paired with steamed silky microfoam.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;580</span>
+                                <a href="menu.html" class="btn btn-outline-gold btn-sm py-2 px-3">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="section-padding bg-light-gray" style="background-color: var(--color-light-gray); transition: background-color 0.5s ease;">
+        <div class="container text-center reveal-on-scroll">
+            <span class="section-subtitle">Our Pride</span>
+            <h2 class="section-title mb-5">Awards & Achievements</h2>
+            <div class="row g-4 align-items-center justify-content-center mt-2">
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-award fa-3x text-gold mb-3"></i>
+                        <h6 class="fw-bold">Michelin Guide Recommended</h6>
+                        <p class="text-muted small">2021 - 2025</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-trophy fa-3x text-gold mb-3"></i>
+                        <h6 class="fw-bold">Best Fine Dining Restaurant</h6>
+                        <p class="text-muted small">City Culinary Awards</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-star-of-life fa-3x text-gold mb-3"></i>
+                        <h6 class="fw-bold">5-Star Culinary Excellence</h6>
+                        <p class="text-muted small">Food Standards Agency</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fas fa-medal fa-3x text-gold mb-3"></i>
+                        <h6 class="fw-bold">Master Coffee Roasters Award</h6>
+                        <p class="text-muted small">National Barista Guild</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title-wrap text-center reveal-on-scroll">
+                <span class="section-subtitle">Reviews</span>
+                <h2 class="section-title">What Our Guests Say</h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Testimonial 1 -->
+                <div class="col-md-6 col-lg-4 reveal-on-scroll">
+                    <div class="testimonial-card glass-card">
+                        <div class="text-gold mb-3">
+                            <i class="fas fa-quote-left fa-2x"></i>
+                        </div>
+                        <p class="testimonial-text">Haveli has completely redefined my standards for Italian dining. The White Truffle Tagliatelle was rich, balanced, and cooked to perfection. The glassmorphic interiors make for a stunning date night!"</p>
+                        <div class="testimonial-user">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sophia Lauren" class="testimonial-avatar">
+                            <div>
+                                <h5 class="testimonial-name">Sumalika</h5>
+                                <span class="testimonial-role">Culinary Critic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-md-6 col-lg-4 reveal-on-scroll">
+                    <div class="testimonial-card glass-card">
+                        <div class="text-gold mb-3">
+                            <i class="fas fa-quote-left fa-2x"></i>
+                        </div>
+                        <p class="testimonial-text">"The single-origin flat white is hands-down the best coffee in town. They roast their beans in-house, and it truly shows. Combined with the elegant, calming aesthetics, it is my favorite workspace."</p>
+                        <div class="testimonial-user">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="David Miller" class="testimonial-avatar">
+                            <div>
+                                <h5 class="testimonial-name">Sirish</h5>
+                                <span class="testimonial-role">Local Food Guide</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="col-md-6 col-lg-4 reveal-on-scroll">
+                    <div class="testimonial-card glass-card">
+                        <div class="text-gold mb-3">
+                            <i class="fas fa-quote-left fa-2x"></i>
+                        </div>
+                        <p class="testimonial-text">"Celebrating my birthday at L'Ambroisie was a dream. The service was impeccable, the reservation was seamless, and the Tomahawk steak was literally melt-in-your-mouth. Worth every star!"</p>
+                        <div class="testimonial-user">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Amelia Watson" class="testimonial-avatar">
+                            <div>
+                                <h5 class="testimonial-name">Amelia</h5>
+                                <span class="testimonial-role">Gourmet Lover</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Delivery Partners Section -->
+    <section class="section-padding bg-light-gray" style="background-color: var(--color-light-gray); transition: background-color 0.5s ease;">
+        <div class="container text-center reveal-on-scroll">
+            <h5 class="text-uppercase tracking-wider text-gold mb-4 fw-bold">Can't Visit Us? We Deliver!</h5>
+            <div class="row justify-content-center align-items-center g-5 opacity-75">
+                <div class="col-6 col-sm-3 col-md-2">
+                    <h4 class="display-font text-muted"><i class="fas fa-shipping-fast me-2"></i>UberEats</h4>
+                </div>
+                <div class="col-6 col-sm-3 col-md-2">
+                    <h4 class="display-font text-muted"><i class="fas fa-motorcycle me-2"></i>DoorDash</h4>
+                </div>
+                <div class="col-6 col-sm-3 col-md-2">
+                    <h4 class="display-font text-muted"><i class="fas fa-truck-pickup me-2"></i>Deliveroo</h4>
+                </div>
+                <div class="col-6 col-sm-3 col-md-2">
+                    <h4 class="display-font text-muted"><i class="fas fa-box-open me-2"></i>Grubhub</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section Preview -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title-wrap text-center reveal-on-scroll">
+                <span class="section-subtitle">Our Blog</span>
+                <h2 class="section-title">Latest Culinary Articles</h2>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Blog 1 -->
+                <div class="col-lg-4 reveal-on-scroll">
+                    <div class="glass-card h-100 overflow-hidden">
+                        <div class="position-relative" style="height: 200px;">
+                            <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=300&q=80" alt="Coffee beans roasting" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-gold small fw-bold">Coffee Craft</span>
+                            <h4 class="display-font fs-5 mt-2 mb-3">The Chemistry of Roasting Organic Coffee Beans</h4>
+                            <p class="text-muted small">Explore the step-by-step process of how green beans transform into aromatic specialty blends in our roasting chambers.</p>
+                            <a href="about.html" class="text-gold fw-semibold small d-inline-flex align-items-center gap-1 mt-3">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 2 -->
+                <div class="col-lg-4 reveal-on-scroll">
+                    <div class="glass-card h-100 overflow-hidden">
+                        <div class="position-relative" style="height: 200px;">
+                            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=300&q=80" alt="Gourmet ingredients" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-gold small fw-bold">Gastronomy</span>
+                            <h4 class="display-font fs-5 mt-2 mb-3">Sourcing Local & Sustainable Ingredients</h4>
+                            <p class="text-muted small">Learn why partnering directly with local dairy artisans and organic vegetable farms defines our food quality.</p>
+                            <a href="about.html" class="text-gold fw-semibold small d-inline-flex align-items-center gap-1 mt-3">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 3 -->
+                <div class="col-lg-4 reveal-on-scroll">
+                    <div class="glass-card h-100 overflow-hidden">
+                        <div class="position-relative" style="height: 200px;">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80" alt="Dining experience" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-gold small fw-bold">Wine & Pairings</span>
+                            <h4 class="display-font fs-5 mt-2 mb-3">Perfecting the Art of Wine Pairing</h4>
+                            <p class="text-muted small">Our Sommelier breaks down how to match structural acids and tannins in fine wines with our core meat entrees.</p>
+                            <a href="about.html" class="text-gold fw-semibold small d-inline-flex align-items-center gap-1 mt-3">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Grid -->
+    <section class="section-padding bg-light-gray" style="background-color: var(--color-light-gray); transition: background-color 0.5s ease;">
+        <div class="container-fluid px-4">
+            <div class="section-title-wrap text-center reveal-on-scroll">
+                <span class="section-subtitle">Social Connect</span>
+                <h2 class="section-title">Follow Us on Instagram</h2>
+                <p class="text-muted mt-2"><i class="fab fa-instagram text-gold"></i> @Haveli_Culinary</p>
+            </div>
+            
+            <div class="instagram-grid reveal-on-scroll">
+                <!-- Item 1 -->
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80" alt="Insta Post 1">
+                    <div class="instagram-hover"><i class="fab fa-instagram"></i></div>
+                </div>
+                <!-- Item 2 -->
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=300&q=80" alt="Insta Post 2">
+                    <div class="instagram-hover"><i class="fab fa-instagram"></i></div>
+                </div>
+                <!-- Item 3 -->
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=300&q=80" alt="Insta Post 3">
+                    <div class="instagram-hover"><i class="fab fa-instagram"></i></div>
+                </div>
+                <!-- Item 4 -->
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=300&q=80" alt="Insta Post 4">
+                    <div class="instagram-hover"><i class="fab fa-instagram"></i></div>
+                </div>
+                <!-- Item 5 -->
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=300&q=80" alt="Insta Post 5">
+                    <div class="instagram-hover"><i class="fab fa-instagram"></i></div>
+                </div>
+                <!-- Item 6 -->
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=300&q=80" alt="Insta Post 6">
+                    <div class="instagram-hover"><i class="fab fa-instagram"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 reveal-on-scroll">
+                    <div class="glass-card p-5 text-center">
+                        <span class="section-subtitle">Newsletter</span>
+                        <h2 class="display-font text-gold mb-3">Join the Inner Circle</h2>
+                        <p class="text-muted mb-4 mx-auto" style="max-width: 500px;">Subscribe to receive exclusive weekly offers, invitations to private tasting events, and special chef recipes.</p>
+                        
+                        <form id="newsletter-form" class="needs-validation" novalidate>
+                            <div class="row g-2 justify-content-center">
+                                <div class="col-md-7">
+                                    <input type="email" class="form-control form-control-lg rounded-pill border-glass px-4" style="background: rgba(var(--color-cream-rgb), 0.5);" placeholder="Enter your email address" required>
+                                    <div class="invalid-feedback text-start ps-4">Please provide a valid email address.</div>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="submit" class="btn btn-gold btn-lg w-100">Subscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Info & Socials -->
+                <div class="col-md-6 col-lg-4">
+                    <a class="d-inline-block" href="index.html">
+                        <span class="display-font text-gold fs-2 fw-bold tracking-wide">HAVELI RESTUARANT</span>
+                    </a>
+                    <p class="mt-3" style="max-width: 320px; color:#BCACA6;">Indulge in organic, sustainable, and artfully-plated gastronomy inside an immersive premium dining experience.</p>
+                    <div class="footer-social-icons mt-4">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Contact info -->
+                <div class="col-6 col-lg-3">
+                    <h5 class="footer-heading">Contact Details</h5>
+                    <ul class="footer-links text-muted">
+                        <li class="d-flex align-items-start gap-2">
+                            <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+                            <a href="https://maps.google.com/?q=Anand+Theatre+Complex,+Banugudi+Junction,+PerrajuPeta+Kakinada+533033" target="_blank" rel="noopener noreferrer">
+                                Anand Theatre Complex, Banugudi Junction<br>PerrajuPeta Kakinada 533033
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fas fa-phone text-gold"></i>
+                            <a href="tel:+918143976686">81439 76686</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fas fa-envelope text-gold"></i>
+                            <a href="mailto:reserve@haveli.com">havelirestuarant@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Hours -->
+                <div class="col-md-6 col-lg-3" style="color:#BCACA6;">
+                    <h5 class="footer-heading">Opening Hours</h5>
+                    <ul class="footer-links">
+                        <li class="d-flex justify-content-between">
+                            <span>Monday - Friday</span>
+                            <span>8:00 AM - 10:00 PM</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <span>Saturday</span>
+                            <span>9:00 AM - 11:00 PM</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <span>Sunday</span>
+                            <span>9:00 AM - 9:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 Haveli cafe & Restaurant. All Rights Reserved. Designed by Antigravity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <a href="#" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Reservation Modal (Glassmorphism layout) -->
+    <div class="modal fade glass-modal" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title display-font fs-3 text-gold" id="reservationModalLabel">Book a Table</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="reservation-form" class="needs-validation" novalidate>
+                    <div class="modal-body p-4">
+                        <div class="row g-3">
+                            <!-- Full name -->
+                            <div class="col-md-6">
+                                <label for="res-name" class="form-label small fw-semibold">Full Name</label>
+                                <input type="text" class="form-control" id="res-name" required placeholder="John Doe">
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <label for="res-email" class="form-label small fw-semibold">Email Address</label>
+                                <input type="email" class="form-control" id="res-email" required placeholder="john@example.com">
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <!-- Phone -->
+                            <div class="col-md-6">
+                                <label for="res-phone" class="form-label small fw-semibold">Phone Number</label>
+                                <input type="tel" class="form-control" id="res-phone" required placeholder="+1 (555) 0123">
+                                <div class="invalid-feedback">Please enter your phone number.</div>
+                            </div>
+                            <!-- Guests -->
+                            <div class="col-md-6">
+                                <label for="res-guests" class="form-label small fw-semibold">Number of Guests</label>
+                                <select class="form-control form-select" id="res-guests" required>
+                                    <option value="" disabled selected>Select size</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5-6">5-6 People</option>
+                                    <option value="7+">7+ People (Event/Large)</option>
+                                </select>
+                                <div class="invalid-feedback">Please choose table size.</div>
+                            </div>
+                            <!-- Date -->
+                            <div class="col-md-6">
+                                <label for="res-date" class="form-label small fw-semibold">Select Date</label>
+                                <input type="date" class="form-control" id="res-date" required>
+                                <div class="invalid-feedback">Please choose a date.</div>
+                            </div>
+                            <!-- Time -->
+                            <div class="col-md-6">
+                                <label for="res-time" class="form-label small fw-semibold">Select Time</label>
+                                <input type="time" class="form-control" id="res-time" required>
+                                <div class="invalid-feedback">Please choose a time.</div>
+                            </div>
+                            <!-- Requests -->
+                            <div class="col-12">
+                                <label for="res-comments" class="form-label small fw-semibold">Special Request / Dietary Needs</label>
+                                <textarea class="form-control" id="res-comments" rows="3" placeholder="E.g., high-chair needed, allergic to nuts, birthday celebration..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-gold text-white" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-gold">Confirm Reservation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

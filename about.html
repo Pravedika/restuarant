@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the story, mission, and culinary team behind L'Ambroisie. Learn about our commitment to organic, sustainable ingredients and fine dining.">
+    <title>About Us | Haveli Restaurant</title>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Preloader (Loading Screen) -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="loader-coffee"></div>
+            <h4 class="display-font text-gold">HAVELI RESTAURANT</h4>
+            <p class="text-muted small">Crafting culinary perfection...</p>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="display-font text-brown fs-2 fw-bold tracking-wide">HAVELI RESTAURANT</span>
+            </a>
+            
+            <div class="d-flex align-items-center order-lg-last gap-3">
+                <!-- Theme Toggle -->
+                <button class="btn-theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <!-- Book Table CTA -->
+                <button class="btn btn-gold d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                    Reserve Table
+                </button>
+                
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars fs-3"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header (Small Hero) -->
+    <section class="position-relative overflow-hidden py-5 d-flex align-items-center" style="height: 350px; background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; margin-top: 0;">
+        <div class="hero-overlay" style="background: rgba(18, 11, 9, 0.75);"></div>
+        <div class="container position-relative text-center text-white" style="z-index: 4;">
+            <h1 class="display-4 fw-bold display-font"style="color:bisque;">About Our Story</h1>
+            <p class="lead text-gold italic">A Legacy of Fine Gastronomy & Elegant Ambiance</p>
+        </div>
+    </section>
+
+    <!-- Restaurant Story Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal-on-scroll">
+                    <span class="section-subtitle">Our Roots</span>
+                    <h2 class="section-title text-start mb-4">How Haveli Began</h2>
+                    <p class="lead text-gold font-secondary italic mb-4">"A passion for culinary excellence that started in a small rustic kitchen and evolved into an award-winning premium venue."</p>
+                    <p class="mb-4">Founded in 2012 by Chef Henri Laurent, Haveli began as a dream to bring fine-dining quality to a comfortable, stylish environment. Chef Henri, having worked in three-starred Parisian kitchens, wanted to break the stiffness of classic restaurants while retaining their meticulous standards of cooking and pairing.</p>
+                    <p class="mb-0 text-muted">Over the past decade, we have expanded our location, installed our own in-house coffee roasting machinery, built a state-of-the-art temperature-controlled wine room, and continuously refined our menus. Yet, our core philosophy remains unchanged: serve exceptional food, with passion and zero compromise.</p>
+                </div>
+                <div class="col-lg-6 reveal-on-scroll">
+                    <div class="position-relative" style="height: 480px;">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Kitchen Prep Story" class="w-100 h-100 object-fit-cover rounded-4 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section-padding bg-light-gray" style="background-color: var(--color-light-gray); transition: background-color 0.5s ease;">
+        <div class="container">
+            <div class="row g-4 justify-content-center text-center">
+                <!-- Mission -->
+                <div class="col-md-5 reveal-on-scroll">
+                    <div class="glass-card p-5 h-100">
+                        <div class="mb-4 text-gold"><i class="fas fa-bullseye fa-3x"></i></div>
+                        <h3 class="display-font mb-3">Our Mission</h3>
+                        <p class="text-muted">To excite and inspire our guests by delivering meticulously crafted plates, premium single-origin coffees, and curated wine pairings, all while supporting sustainable local farming and delivering warm, elite service.</p>
+                    </div>
+                </div>
+                <!-- Vision -->
+                <div class="col-md-5 reveal-on-scroll">
+                    <div class="glass-card p-5 h-100">
+                        <div class="mb-4 text-gold"><i class="fas fa-eye fa-3x"></i></div>
+                        <h3 class="display-font mb-3">Our Vision</h3>
+                        <p class="text-muted">To be globally recognized as a pioneer in modern, approachable fine dining, creating a sanctuary where gastronomic art, cutting-edge interior design, and ecological mindfulness coexist beautifully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Chefs Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title-wrap text-center reveal-on-scroll">
+                <span class="section-subtitle">Culinary Masters</span>
+                <h2 class="section-title">Meet Our Creative Chefs</h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Chef 1 -->
+                <div class="col-md-6 col-lg-4 reveal-on-scroll">
+                    <div class="glass-card h-100 overflow-hidden text-center">
+                        <div class="position-relative" style="height: 350px;">
+                            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=300&q=80" alt="Executive Chef" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="display-font text-gold mb-1">Suhas</h4>
+                            <span class="text-muted small uppercase">Executive Chef & Founder</span>
+                            <p class="text-muted mt-3 small">Henri has 20+ years of fine-dining experience across Paris, Tokyo, and New York. He is the creative force behind our signature mains.</p>
+                            <div class="d-flex justify-content-center gap-3 mt-4 text-gold">
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chef 2 -->
+                <div class="col-md-6 col-lg-4 reveal-on-scroll">
+                    <div class="glass-card h-100 overflow-hidden text-center">
+                        <div class="position-relative" style="height: 350px;">
+                            <img src="https://t3.ftcdn.net/jpg/06/46/05/30/360_F_646053080_8CsTU3zKEb0xbx03wBekNZNoYCTSs0xi.jpg" alt="Pastry Chef" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="display-font text-gold mb-1">Srikanth</h4>
+                            <span class="text-muted small uppercase">Head Pastry Chef</span>
+                            <p class="text-muted mt-3 small">Elena treats baking as high science and fine art. Her custom dessert menu includes some of the city's most photographed confectioneries.</p>
+                            <div class="d-flex justify-content-center gap-3 mt-4 text-gold">
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chef 3 -->
+                <div class="col-md-6 col-lg-4 reveal-on-scroll">
+                    <div class="glass-card h-100 overflow-hidden text-center">
+                        <div class="position-relative" style="height: 350px;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXFg35-Qz5FDvAgaqmMiohDiW_7cO71s9wzSn1eOkdFA&s=10" alt="Barista / Sommelier" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="display-font text-gold mb-1">Manoj</h4>
+                            <span class="text-muted small uppercase">Lead Sommelier & Coffee Master</span>
+                            <p class="text-muted mt-3 small">Marcus is in charge of selecting our international wine roster and roasting our micro-lot single-origin beans to perfection.</p>
+                            <div class="d-flex justify-content-center gap-3 mt-4 text-gold">
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section-padding bg-light-gray" style="background-color: var(--color-light-gray); transition: background-color 0.5s ease;">
+        <div class="container">
+            <div class="section-title-wrap text-center reveal-on-scroll">
+                <span class="section-subtitle">Our Strengths</span>
+                <h2 class="section-title">Why Dine At Haveli</h2>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Point 1 -->
+                <div class="col-md-6 col-lg-3 reveal-on-scroll">
+                    <div class="glass-card p-4 h-100 text-center">
+                        <div class="mb-3 text-gold"><i class="fas fa-leaf fa-2x"></i></div>
+                        <h4 class="display-font fs-5 mb-2">100% Organic & Local</h4>
+                        <p class="text-muted small mb-0">We work directly with certified regional farms to source clean, pesticide-free greens and hormone-free meats daily.</p>
+                    </div>
+                </div>
+                <!-- Point 2 -->
+                <div class="col-md-6 col-lg-3 reveal-on-scroll">
+                    <div class="glass-card p-4 h-100 text-center">
+                        <div class="mb-3 text-gold"><i class="fas fa-fire fa-2x"></i></div>
+                        <h4 class="display-font fs-5 mb-2">Oakwood Open Fire</h4>
+                        <p class="text-muted small mb-0">Our signature meats and fishes are grilled over authentic select seasoned oak, producing distinct earthy smoky flavors.</p>
+                    </div>
+                </div>
+                <!-- Point 3 -->
+                <div class="col-md-6 col-lg-3 reveal-on-scroll">
+                    <div class="glass-card p-4 h-100 text-center">
+                        <div class="mb-3 text-gold"><i class="fas fa-award fa-2x"></i></div>
+                        <h4 class="display-font fs-5 mb-2">Award-Winning Culinary</h4>
+                        <p class="text-muted small mb-0">Led by French-trained Master Chef Henri Laurent, our kitchen team creates plates recognized by top international food guides.</p>
+                    </div>
+                </div>
+                <!-- Point 4 -->
+                <div class="col-md-6 col-lg-3 reveal-on-scroll">
+                    <div class="glass-card p-4 h-100 text-center">
+                        <div class="mb-3 text-gold"><i class="fas fa-glass-cheers fa-2x"></i></div>
+                        <h4 class="display-font fs-5 mb-2">Glassmorphism Ambience</h4>
+                        <p class="text-muted small mb-0">Our dining room design features glass, premium marble accents, and soft custom lighting, crafting a luxurious visual sanctuary.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Timeline Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title-wrap text-center reveal-on-scroll">
+                <span class="section-subtitle">Our Journey</span>
+                <h2 class="section-title">Milestones & Achievements</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8 reveal-on-scroll">
+                    <ul class="list-unstyled position-relative border-start border-gold ps-4 py-2">
+                        <!-- Milestone 1 -->
+                        <li class="position-relative mb-5">
+                            <span class="position-absolute start-0 translate-middle bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; left: -24px !important;">
+                                <i class="fas fa-check text-dark" style="font-size: 0.7rem;"></i>
+                            </span>
+                            <span class="text-gold fw-bold display-font fs-5">2012 - Grand Launch</span>
+                            <h4 class="display-font fs-6 mt-1 mb-2">The Dream Materializes</h4>
+                            <p class="text-muted small">Chef Henri Laurent establishes L'Ambroisie as a small 30-seat boutique cafe and bistro in Gourmet Heights, immediately winning local praise for its exceptional French pastry selection.</p>
+                        </li>
+                        <!-- Milestone 2 -->
+                        <li class="position-relative mb-5">
+                            <span class="position-absolute start-0 translate-middle bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; left: -24px !important;">
+                                <i class="fas fa-check text-dark" style="font-size: 0.7rem;"></i>
+                            </span>
+                            <span class="text-gold fw-bold display-font fs-5">2017 - Expansion & Roastery</span>
+                            <h4 class="display-font fs-6 mt-1 mb-2">Expanding the Craft</h4>
+                            <p class="text-muted small">We acquire the neighboring property, tripling our seating capacity, adding an open kitchen concept, and installing our in-house specialty coffee roasting plant to deliver single-origin coffee masterclasses.</p>
+                        </li>
+                        <!-- Milestone 3 -->
+                        <li class="position-relative mb-0">
+                            <span class="position-absolute start-0 translate-middle bg-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; left: -24px !important;">
+                                <i class="fas fa-star text-dark" style="font-size: 0.7rem;"></i>
+                            </span>
+                            <span class="text-gold fw-bold display-font fs-5">2023 - Michelin Guide Recognition</span>
+                            <h4 class="display-font fs-6 mt-1 mb-2">Earning Global Recognition</h4>
+                            <p class="text-muted small">L'Ambroisie is officially added to the prestigious Michelin Guide Guide, recognized for its commitment to ingredient sustainability and innovative culinary techniques.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section class="section-padding bg-light-gray" style="background-color: var(--color-light-gray); transition: background-color 0.5s ease;">
+        <div class="container text-center reveal-on-scroll">
+            <span class="section-subtitle">Visual Tour</span>
+            <h2 class="section-title mb-5">Restaurant Gallery Preview</h2>
+            
+            <div id="galleryPreviewCarousel" class="carousel slide glass-card p-3 max-w-800 mx-auto" data-bs-ride="carousel" style="max-width: 800px;">
+                <div class="carousel-inner rounded-3">
+                    <div class="carousel-item active" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=800&q=80" class="d-block w-100 h-100 object-fit-cover" alt="Interior Seating">
+                    </div>
+                    <div class="carousel-item" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=800&q=80" class="d-block w-100 h-100 object-fit-cover" alt="Fine dining table">
+                    </div>
+                    <div class="carousel-item" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" class="d-block w-100 h-100 object-fit-cover" alt="Barista Bar">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryPreviewCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryPreviewCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <a href="gallery.html" class="btn btn-gold mt-5">Explore Full Gallery</a>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Preview -->
+    <section class="section-padding">
+        <div class="container text-center reveal-on-scroll">
+            <span class="section-subtitle">Guest Feedbacks</span>
+            <h2 class="section-title mb-5">Loved By Celebrated Foodies</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <p class="lead italic font-secondary mb-4">"The commitment to organic details shines. From the freshly roasted Colombian flat white to the complex texture of their parma pizza, L'Ambroisie remains an absolute favorite."</p>
+                                <h6 class="fw-bold text-gold mb-0">Samantha Higgins</h6>
+                                <span class="text-muted small">Culinary Journalist</span>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="lead italic font-secondary mb-4">" Henri's culinary wisdom shows in his Tomahawk. Perfect sear, fantastic resting, and matches beautifully with their cellar's organic Cabernet."</p>
+                                <h6 class="fw-bold text-gold mb-0">Robert G. Lang</h6>
+                                <span class="text-muted small">Gastronomy Enthusiast</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3 mt-4">
+                            <button class="btn btn-outline-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="btn btn-outline-gold rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Info & Socials -->
+                <div class="col-md-6 col-lg-4">
+                    <a class="d-inline-block" href="index.html">
+                        <span class="display-font text-gold fs-2 fw-bold tracking-wide">HAVELI RESTUARANT</span>
+                    </a>
+                    <p class="mt-3" style="max-width: 320px; color:#BCACA6;">Indulge in organic, sustainable, and artfully-plated gastronomy inside an immersive premium dining experience.</p>
+                    <div class="footer-social-icons mt-4">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Contact info -->
+                <div class="col-6 col-lg-3">
+                    <h5 class="footer-heading">Contact Details</h5>
+                    <ul class="footer-links text-muted">
+                        <li class="d-flex align-items-start gap-2">
+                            <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+                             <a href="https://maps.google.com/?q=Anand+Theatre+Complex,+Banugudi+Junction,+PerrajuPeta+Kakinada+533033" target="_blank" rel="noopener noreferrer">
+                                Anand Theatre Complex, Banugudi Junction<br>PerrajuPeta Kakinada 533033
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fas fa-phone text-gold"></i>
+                            <a href="tel:+918143976686">81439 76686</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fas fa-envelope text-gold"></i>
+                            <a href="mailto:reserve@lambroisie.com">havelirestuarant@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Hours -->
+                <div class="col-md-6 col-lg-3" style="color:#BCACA6;">
+                    <h5 class="footer-heading">Opening Hours</h5>
+                    <ul class="footer-links">
+                        <li class="d-flex justify-content-between">
+                            <span>Monday - Friday</span>
+                            <span>8:00 AM - 10:00 PM</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <span>Saturday</span>
+                            <span>9:00 AM - 11:00 PM</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <span>Sunday</span>
+                            <span>9:00 AM - 9:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 Haveli cafe & Restaurant. All Rights Reserved. Designed by Antigravity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <a href="#" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Reservation Modal (Glassmorphism layout) -->
+    <div class="modal fade glass-modal" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title display-font fs-3 text-gold" id="reservationModalLabel">Book a Table</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="reservation-form" class="needs-validation" novalidate>
+                    <div class="modal-body p-4">
+                        <div class="row g-3">
+                            <!-- Full name -->
+                            <div class="col-md-6">
+                                <label for="res-name" class="form-label small fw-semibold">Full Name</label>
+                                <input type="text" class="form-control" id="res-name" required placeholder="John Doe">
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <label for="res-email" class="form-label small fw-semibold">Email Address</label>
+                                <input type="email" class="form-control" id="res-email" required placeholder="john@example.com">
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <!-- Phone -->
+                            <div class="col-md-6">
+                                <label for="res-phone" class="form-label small fw-semibold">Phone Number</label>
+                                <input type="tel" class="form-control" id="res-phone" required placeholder="+1 (555) 0123">
+                                <div class="invalid-feedback">Please enter your phone number.</div>
+                            </div>
+                            <!-- Guests -->
+                            <div class="col-md-6">
+                                <label for="res-guests" class="form-label small fw-semibold">Number of Guests</label>
+                                <select class="form-control form-select" id="res-guests" required>
+                                    <option value="" disabled selected>Select size</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5-6">5-6 People</option>
+                                    <option value="7+">7+ People (Event/Large)</option>
+                                </select>
+                                <div class="invalid-feedback">Please choose table size.</div>
+                            </div>
+                            <!-- Date -->
+                            <div class="col-md-6">
+                                <label for="res-date" class="form-label small fw-semibold">Select Date</label>
+                                <input type="date" class="form-control" id="res-date" required>
+                                <div class="invalid-feedback">Please choose a date.</div>
+                            </div>
+                            <!-- Time -->
+                            <div class="col-md-6">
+                                <label for="res-time" class="form-label small fw-semibold">Select Time</label>
+                                <input type="time" class="form-control" id="res-time" required>
+                                <div class="invalid-feedback">Please choose a time.</div>
+                            </div>
+                            <!-- Requests -->
+                            <div class="col-12">
+                                <label for="res-comments" class="form-label small fw-semibold">Special Request / Dietary Needs</label>
+                                <textarea class="form-control" id="res-comments" rows="3" placeholder="E.g., high-chair needed, allergic to nuts, birthday celebration..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-gold text-white" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-gold">Confirm Reservation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

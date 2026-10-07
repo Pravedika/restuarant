@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore L'Ambroisie's premium menu. Filter through breakfast, lunch, dinners, wood-fired pizzas, artisan pastas, desserts, and house-roasted specialty coffees.">
+    <title>Our Menu | L'Ambroisie Cafe & Restaurant</title>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Preloader (Loading Screen) -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="loader-coffee"></div>
+            <h4 class="display-font text-gold">HAVELI RESTAURANT</h4>
+            <p class="text-muted small">Crafting culinary perfection...</p>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="display-font text-brown fs-2 fw-bold tracking-wide">HAVELI RESTAURANT</span>
+            </a>
+            
+            <div class="d-flex align-items-center order-lg-last gap-3">
+                <!-- Theme Toggle -->
+                <button class="btn-theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <!-- Book Table CTA -->
+                <button class="btn btn-gold d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                    Reserve Table
+                </button>
+                
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars fs-3"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header (Small Hero) -->
+    <section class="position-relative overflow-hidden py-5 d-flex align-items-center" style="height: 350px; background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; margin-top: 0;">
+        <div class="hero-overlay" style="background: rgba(18, 11, 9, 0.75);"></div>
+        <div class="container position-relative text-center text-white" style="z-index: 4;">
+            <h1 class="display-4 fw-bold display-font" style="color:bisque;">Our Culinary Menu</h1>
+            <p class="lead text-gold italic">Hand-crafted creations using fresh, organic & sustainable ingredients</p>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <section class="section-padding">
+        <div class="container">
+            <!-- Search & Filter Card -->
+            <div class="glass-card p-4 mb-5 reveal-on-scroll">
+                <div class="row g-3 align-items-center justify-content-between">
+                    <div class="col-md-5">
+                        <h4 class="display-font mb-0 text-gold">Search Our Kitchen</h4>
+                        <p class="text-muted small mb-0">Type dish names or ingredient keywords</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="input-group">
+                            <span class="input-group-text bg-transparent border-glass text-gold"><i class="fas fa-search"></i></span>
+                            <input type="text" id="menu-search-bar" class="form-control border-glass px-3 py-2" placeholder="Search for Tiramisu, Tomahawk, Salmon, Latte..." style="background: rgba(var(--color-cream-rgb), 0.3);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Filter Buttons -->
+            <div class="d-flex flex-wrap justify-content-center mb-5 reveal-on-scroll">
+                <button class="menu-filter-btn active" data-filter="all">All Items</button>
+                <button class="menu-filter-btn" data-filter="breakfast">Breakfast</button>
+                <button class="menu-filter-btn" data-filter="lunch">Lunch</button>
+                <button class="menu-filter-btn" data-filter="dinner">Dinner</button>
+                <button class="menu-filter-btn" data-filter="fastfood">Fast Food</button>
+                <button class="menu-filter-btn" data-filter="pizza">Pizza</button>
+                <button class="menu-filter-btn" data-filter="burgers">Burgers</button>
+                <button class="menu-filter-btn" data-filter="pasta">Pasta</button>
+                <button class="menu-filter-btn" data-filter="desserts">Desserts</button>
+                <button class="menu-filter-btn" data-filter="coffee">Coffee</button>
+                <button class="menu-filter-btn" data-filter="beverages">Beverages</button>
+            </div>
+
+            <!-- Menu Grid Container -->
+            <div class="row g-4 justify-content-center" id="menu-items-container">
+                <!-- Breakfast: Avocado Toast -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="breakfast">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Breakfast</span>
+                            <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=400&q=80" alt="Avocado Toast" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Gourmet Avocado Toast</h4>
+                            <p class="text-muted dish-desc">Toasted organic sourdough topped with crushed Hass avocado, heirloom cherry tomatoes, organic feta cheese, and red chili flakes.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;150.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Avocado Toast">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakfast: Waffles -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="breakfast">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Breakfast</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsHhuhsB5qTTTqoA7k9g83clUtRgmPN9U1pWysXRZHsFlJJ3QFiJgCeLGX&s=10" alt="Classic Waffles" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Belgian Berry Waffles</h4>
+                            <p class="text-muted dish-desc">Fluffy golden waffles served with a medley of fresh seasonal berries, organic maple syrup, and home-whipped vanilla cream.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;120.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Belgian Waffles">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunch: Salmon -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="lunch">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Lunch</span>
+                            <img src="https://healthyrecipesblogs.com/wp-content/uploads/2024/06/pan-fried-salmon-featured-new.jpg" alt="Pan Seared Salmon" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Pan-Seared Atlantic Salmon</h4>
+                            <p class="text-muted dish-desc">Fresh wild-caught salmon fillet, crispy skin, served over creamed asparagus, organic baby potatoes, and a dill lemon glaze.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;180.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Pan-Seared Salmon">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunch: Caesar Salad -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="lunch">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Lunch</span>
+                            <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=400&q=80" alt="Caesar Salad" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Artisan Caesar Salad</h4>
+                            <p class="text-muted dish-desc">Crisp organic romaine lettuce, garlic sourdough croutons, shaved 24-month Parmigiano-Reggiano, house caesar dressing.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;500.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Caesar Salad">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dinner: Filet Mignon -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="dinner">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Dinner</span>
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80" alt="Filet Mignon" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Prime Filet Mignon</h4>
+                            <p class="text-muted dish-desc">8oz tender center-cut beef tenderloin seared with rosemary garlic butter, served with truffle mashed potatoes and red wine reduction.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;450.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Filet Mignon">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dinner: Roasted Duck -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="dinner">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Dinner</span>
+                            <img src="https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&w=400&q=80" alt="Roasted Duck" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Crispy Duck Breast</h4>
+                            <p class="text-muted dish-desc">Seared spiced duck breast with honey-orange glaze, served over wild mushroom risotto and roasted seasonal baby vegetables.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;380.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Crispy Duck Breast">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fast Food: Chicken Tenders -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="fastfood">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Fast Food</span>
+                            <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=400&q=80" alt="Crispy Chicken Tenders" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Crispy Buttermilk Tenders</h4>
+                            <p class="text-muted dish-desc">Golden double-dredged buttermilk chicken strips served with house sweet potato fries and organic honey mustard dip.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;400.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Buttermilk Tenders">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza: Margherita -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="pizza">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Pizza</span>
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80" alt="Margherita Pizza" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Stone-Oven Margherita</h4>
+                            <p class="text-muted dish-desc">Slow-proved sourdough crust, sweet San Marzano tomato sauce, fresh creamy buffalo mozzarella, and aromatic organic basil.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;530.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Margherita Pizza">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza: Truffle Pizza -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="pizza">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Pizza</span>
+                            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=400&q=80" alt="Truffle Pizza" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">White Truffle & Mushroom Pizza</h4>
+                            <p class="text-muted dish-desc">Garlic cream base, mozzarella, portobello mushrooms, wild chanterelles, white truffle oil, and organic fresh baby arugula.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;240.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Truffle Pizza">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burgers: Wagyu Burger -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="burgers">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Burgers</span>
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80" alt="Wagyu Cheeseburger" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Signature Wagyu Cheeseburger</h4>
+                            <p class="text-muted dish-desc">6oz premium grilled Wagyu beef patty, double melted cheddar, caramelized onions, truffle aioli on a toasted buttered brioche bun.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;350.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Wagyu Cheeseburger">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pasta: Carbonara -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="pasta">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Pasta</span>
+                            <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=400&q=80" alt="Spaghetti Carbonara" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Authentic Spaghetti Carbonara</h4>
+                            <p class="text-muted dish-desc">Bronze-cut spaghetti tossed with crispy guanciale pork cheek, farm-fresh egg yolks, pecorino romano cheese, cracked black pepper.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;250.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Spaghetti Carbonara">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pasta: Truffle Pasta -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="pasta">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Pasta</span>
+                            <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=400&q=80" alt="White Truffle Tagliatelle" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">White Truffle Tagliatelle</h4>
+                            <p class="text-muted dish-desc">Handmade egg pasta tossed in aged parmigiano cream, infused with authentic fresh white truffles from Umbria.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;250.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Truffle Tagliatelle">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts: Lava Cake -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="desserts">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Desserts</span>
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=400&q=80" alt="Chocolate Lava Cake" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Chocolate Lava Cake</h4>
+                            <p class="text-muted dish-desc">Rich dark chocolate cake with a molten lava center, served warm with house-made vanilla bean ice cream and raspberry coulis.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;1150.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Chocolate Lava Cake">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts: Tiramisu -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="desserts">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Desserts</span>
+                            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=400&q=80" alt="Classic Tiramisu" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font"></h4>
+                            <p class="text-muted dish-desc">Ladyfinger cookies soaked in L'Ambroisie espresso and dark rum, layered with light whipped sweet mascarpone cream and cocoa dust.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">$10.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Tiramisu">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee: Flat White -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="coffee">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Coffee</span>
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80" alt="L'Ambroisie Flat White" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Haveli Flat White</h4>
+                            <p class="text-muted dish-desc">Our single-origin organic Colombian coffee roast, extracted perfectly and paired with steamed silky microfoam.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;580.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Flat White">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee: Nitro Cold Brew -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="coffee">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Coffee</span>
+                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=400&q=80" alt="Nitro Cold Brew" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Organic Nitro Cold Brew</h4>
+                            <p class="text-muted dish-desc">Cold-steeped for 20 hours, infused with nitrogen to create a thick creamy head and smooth, naturally sweet body.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;700.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Nitro Cold Brew">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverages: Mojito -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="beverages">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Beverages</span>
+                            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80" alt="Mojito Mocktail" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Fresh Mint & Lime Mojito</h4>
+                            <p class="text-muted dish-desc">Chilled sparkling water, fresh muddled spearmint leaves, key lime juice, organic cane sugar, and ice pellets.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;850.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Mojito Mocktail">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverages: Amber Ale -->
+                <div class="col-md-6 col-lg-4 menu-item-card" data-category="beverages">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Beverages</span>
+                            <img src="https://static.toiimg.com/thumb/84170265.cms?imgsize=299797&width=800&height=800" alt="Amber Ale" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Mikshake</h4>
+                            <p class="text-muted dish-desc">A delicious milkshake made with vanilla ice cream, fresh fruits, and topped with whipped cream.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;250.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Mikshake">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                       <div class="col-md-6 col-lg-4 menu-item-card" data-category="beverages">
+                    <div class="dish-card glass-card">
+                        <div class="dish-img-wrap">
+                            <span class="dish-tag">Beverages</span>
+                            <img src="https://www.theendlessmeal.com/wp-content/uploads/2023/04/pineapple-smoothie-3.jpg" alt="Amber Ale" class="dish-img">
+                        </div>
+                        <div class="dish-body">
+                            <div class="dish-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="dish-title display-font">Pineapple Mikshake Fizz</h4>
+                            <p class="text-muted dish-desc">A delicious milkshake made with vanilla ice cream, fresh fruits, and topped with whipped cream.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="dish-price">&#8377;250.00</span>
+                                <button class="btn btn-outline-gold btn-sm py-2 px-3 order-btn" data-dish="Pineapple Mikshake Fizz">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Info & Socials -->
+                <div class="col-md-6 col-lg-4">
+                    <a class="d-inline-block" href="index.html">
+                        <span class="display-font text-gold fs-2 fw-bold tracking-wide">HAVELI RESTAURANT</span>
+                    </a>
+                    <p class="mt-3" style="max-width: 320px; color:#BCACA6;">Indulge in organic, sustainable, and artfully-plated gastronomy inside an immersive premium dining experience.</p>
+                    <div class="footer-social-icons mt-4">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Contact info -->
+                <div class="col-6 col-lg-3">
+                    <h5 class="footer-heading">Contact Details</h5>
+                    <ul class="footer-links text-muted">
+                        <li class="d-flex align-items-start gap-2">
+                            <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+                              <a href="https://maps.google.com/?q=Anand+Theatre+Complex,+Banugudi+Junction,+PerrajuPeta+Kakinada+533033" target="_blank" rel="noopener noreferrer">
+                                Anand Theatre Complex, Banugudi Junction<br>PerrajuPeta Kakinada 533033
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fas fa-phone text-gold"></i>
+                            <a href="tel:+918143976686">81439 76686</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fas fa-envelope text-gold"></i>
+                            <a href="mailto:reserve@havelicafe.com">havelirestuarant@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Hours -->
+                 <div class="col-md-6 col-lg-3" style="color:#BCACA6;">
+                    <h5 class="footer-heading">Opening Hours</h5>
+                    <ul class="footer-links">
+                        <li class="d-flex justify-content-between">
+                            <span>Monday - Friday</span>
+                            <span>8:00 AM - 10:00 PM</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <span>Saturday</span>
+                            <span>9:00 AM - 11:00 PM</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <span>Sunday</span>
+                            <span>9:00 AM - 9:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 Haveli cafe & Restaurant. All Rights Reserved. Designed by Antigravity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <a href="#" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Reservation Modal (Glassmorphism layout) -->
+    <div class="modal fade glass-modal" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title display-font fs-3 text-gold" id="reservationModalLabel">Book a Table</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="reservation-form" class="needs-validation" novalidate>
+                    <div class="modal-body p-4">
+                        <div class="row g-3">
+                            <!-- Full name -->
+                            <div class="col-md-6">
+                                <label for="res-name" class="form-label small fw-semibold">Full Name</label>
+                                <input type="text" class="form-control" id="res-name" required placeholder="John Doe">
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <label for="res-email" class="form-label small fw-semibold">Email Address</label>
+                                <input type="email" class="form-control" id="res-email" required placeholder="john@example.com">
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <!-- Phone -->
+                            <div class="col-md-6">
+                                <label for="res-phone" class="form-label small fw-semibold">Phone Number</label>
+                                <input type="tel" class="form-control" id="res-phone" required placeholder="+1 (555) 0123">
+                                <div class="invalid-feedback">Please enter your phone number.</div>
+                            </div>
+                            <!-- Guests -->
+                            <div class="col-md-6">
+                                <label for="res-guests" class="form-label small fw-semibold">Number of Guests</label>
+                                <select class="form-control form-select" id="res-guests" required>
+                                    <option value="" disabled selected>Select size</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5-6">5-6 People</option>
+                                    <option value="7+">7+ People (Event/Large)</option>
+                                </select>
+                                <div class="invalid-feedback">Please choose table size.</div>
+                            </div>
+                            <!-- Date -->
+                            <div class="col-md-6">
+                                <label for="res-date" class="form-label small fw-semibold">Select Date</label>
+                                <input type="date" class="form-control" id="res-date" required>
+                                <div class="invalid-feedback">Please choose a date.</div>
+                            </div>
+                            <!-- Time -->
+                            <div class="col-md-6">
+                                <label for="res-time" class="form-label small fw-semibold">Select Time</label>
+                                <input type="time" class="form-control" id="res-time" required>
+                                <div class="invalid-feedback">Please choose a time.</div>
+                            </div>
+                            <!-- Requests -->
+                            <div class="col-12">
+                                <label for="res-comments" class="form-label small fw-semibold">Special Request / Dietary Needs</label>
+                                <textarea class="form-control" id="res-comments" rows="3" placeholder="E.g., high-chair needed, allergic to nuts, birthday celebration..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-gold text-white" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-gold">Confirm Reservation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- Script to handle URL query filter parameter -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filter = urlParams.get('filter');
+            if (filter) {
+                const targetBtn = document.querySelector(`.menu-filter-btn[data-filter="${filter}"]`);
+                if (targetBtn) {
+                    targetBtn.click();
+                }
+            }
+
+            // Implement successful 'Order' alerts
+            const orderBtns = document.querySelectorAll('.order-btn');
+            orderBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const dishName = btn.getAttribute('data-dish');
+                    
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = 'glass-card text-center p-5 reveal-on-scroll active';
+                    alertDiv.style.position = 'fixed';
+                    alertDiv.style.top = '50%';
+                    alertDiv.style.left = '50%';
+                    alertDiv.style.transform = 'translate(-50%, -50%)';
+                    alertDiv.style.zIndex = '9999';
+                    alertDiv.style.maxWidth = '450px';
+                    alertDiv.style.width = '90%';
+                    
+                    alertDiv.innerHTML = `
+                        <i class="fas fa-shopping-bag fa-4x text-gold mb-3"></i>
+                        <h3 class="mb-3">Order Placed!</h3>
+                        <p class="mb-4">You have ordered <strong>${dishName}</strong>. Our kitchen is preparing it, and your delivery runner is on standby!</p>
+                        <button class="btn btn-gold btn-close-order-alert">Excellent</button>
+                    `;
+
+                    document.body.appendChild(alertDiv);
+
+                    // Add blur overlay
+                    const overlay = document.createElement('div');
+                    overlay.style.position = 'fixed';
+                    overlay.style.top = '0';
+                    overlay.style.left = '0';
+                    overlay.style.width = '100vw';
+                    overlay.style.height = '100vh';
+                    overlay.style.background = 'rgba(18, 11, 9, 0.6)';
+                    overlay.style.backdropFilter = 'blur(5px)';
+                    overlay.style.zIndex = '9998';
+                    document.body.appendChild(overlay);
+
+                    const closeAlert = () => {
+                        alertDiv.remove();
+                        overlay.remove();
+                    };
+
+                    alertDiv.querySelector('.btn-close-order-alert').addEventListener('click', closeAlert);
+                    overlay.addEventListener('click', closeAlert);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
